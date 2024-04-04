@@ -8,14 +8,14 @@ const props = defineProps<{
 </script>
 
 <template>
-  <Head title="SQL Injection" />
+  <Head title="Logic bomb" />
 
   <AuthenticatedLayout>
     <template #header>
       <h2
         class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
       >
-        SQL Injection
+        Logic bomb
       </h2>
     </template>
 
