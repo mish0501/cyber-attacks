@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LogicBombController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SQLInjectionController;
 use Illuminate\Foundation\Application;
@@ -34,8 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/sql-injection', [SQLInjectionController::class, 'index'])->name('sql-injection.index');
+    Route::get('/logic-bomb', [LogicBombController::class, 'index'])->name('logic-bomb.index');
 });
 
-Route::get('/sql-injection', [SQLInjectionController::class, 'index'])->name('sql-injection.index');
 
 require __DIR__ . '/auth.php';
