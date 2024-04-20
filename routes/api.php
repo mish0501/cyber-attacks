@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/super-not-shady-route', [SuperNotShadyController::class, 'superNotShadyMethod']);
+Route::get('/super-not-shady-route', [SuperNotShadyController::class, 'superNotShadyMethod'])->name('logic-bomb.activate');

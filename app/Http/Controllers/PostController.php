@@ -8,6 +8,15 @@ use Inertia\Inertia;
 
 class PostController extends Controller
 {
+    public function index()
+    {
+        $posts = Post::all();
+
+        return Inertia::render('Posts/Index', [
+            'posts' => $posts,
+        ]);
+    }
+
     public function create()
     {
         return Inertia::render('Posts/Create');

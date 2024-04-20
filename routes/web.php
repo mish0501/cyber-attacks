@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/logic-bomb', [LogicBombController::class, 'index'])->name('logic-bomb.index');
 
     // XSS
-    Route::resource('posts', PostController::class)->only(['create', 'store', 'show']);
+    Route::resource('posts', PostController::class)->only(['create', 'store', 'show', 'index']);
 });
 
 
