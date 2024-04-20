@@ -42,6 +42,7 @@ Route::middleware('auth')->group(function () {
 
     // XSS
     Route::resource('posts', PostController::class)->only(['create', 'store', 'show', 'index']);
+    Route::get('/posts/{post}/show-unprotected', [PostController::class, 'showUnprotected'])->name('posts.show-unprotected');
 });
 
 

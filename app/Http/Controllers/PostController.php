@@ -40,4 +40,11 @@ class PostController extends Controller
             'post' => $post,
         ]);
     }
+
+    public function showUnprotected(Post $post)
+    {
+        return view('posts.show', [
+            'post' => $post,
+        ]);
+    }
 }

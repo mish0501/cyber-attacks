@@ -52,11 +52,16 @@ const props = defineProps<{
                     {{ post.id }}
                   </th>
                   <td class="px-6 py-4">{{ post.title }}</td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 gap-3 flex">
                     <Link
                       :href="route('posts.show', post.id)"
                       class="text-indigo-800 dark:text-indigo-400 underline underline-offset-4"
                       >Show</Link
+                    >
+                    <Link
+                      :href="route('posts.show-unprotected', post.id)"
+                      class="text-indigo-800 dark:text-indigo-400 underline underline-offset-4"
+                      >Show unprotected</Link
                     >
                   </td>
                 </tr>
